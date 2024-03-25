@@ -28,9 +28,6 @@ pipeline {
         }
         stage('Deploy to k8s'){
             steps{
-                sshagent(['k85']) {
-                   sh 'kubectl version'
-                 }
                 script{
                      kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8skubeconfig')
                  }
