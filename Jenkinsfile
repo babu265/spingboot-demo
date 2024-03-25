@@ -31,9 +31,9 @@ pipeline {
                 sshagent(['k85']) {
                    sh 'kubectl version'
                  }
-                // script{
-                  //   kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8skubeconfig')
-               //  }
+                script{
+                     kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8skubeconfig')
+                 }
             }
         }
         
