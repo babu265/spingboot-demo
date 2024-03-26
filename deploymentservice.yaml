@@ -13,7 +13,7 @@ spec:
         app: spring-boot-k8s
     spec:
       containers:
-        - name: spring-boot-k8s
+        - name: spring-boot-demo
           image: rameshaws22/spring-boot-demo:latest # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
